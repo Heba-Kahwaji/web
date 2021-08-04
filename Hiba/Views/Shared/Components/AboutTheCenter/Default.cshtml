@@ -1,0 +1,35 @@
+﻿@*@{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+@model Page
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+<div class="section margin-top_50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 layout_padding_2">
+                <div class="full">
+                    <div class="heading_main text_align_left">
+                        <h2><span>@Localizer["About The"]</span> @Localizer["Center"]</h2>
+                    </div>
+                    <div class="full">
+                        <p>
+                            @Html.Raw(@Model.Text)
+                        </p>
+                    </div>
+                    <div class="full">
+                        <a class="hvr-radial-out button-theme" href="#">About more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="full">
+                    <img src="~/images/img2.png" alt="#" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
